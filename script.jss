@@ -1,78 +1,11 @@
-// ---------- Post data: edit this list to add your own posts ----------
-// `image` is a placeholder emoji + background colour; swap for a real image URL if you like.
-const posts = [
-  {
-    tag: "Poems",
-    title: "Imagination misused",
-    excerpt:
-      "You gotta have a level of conviction that it'll happen. That whatever you're trying to do will happen. That it'll all work out. And it will.",
-    date: "2026-08-02",
-    readTime: 1,
-    emoji: "🌱",
-    color: "#e6f4d7",
-  },
-  {
-    tag: "Stories",
-    title: "The house on the hill",
-    excerpt: "I walk out of training and see the house on the hill with the lights on and smoke coming off the barbecue.",
-    date: "2026-07-31",
-    readTime: 1,
-    emoji: "🏡",
-    color: "#fdeccf",
-  },
-  {
-    tag: "Food",
-    title: "A simple health protocol",
-    excerpt: "A bet on general health principles leading to better outcomes.",
-    date: "2026-07-30",
-    readTime: 5,
-    emoji: "🥑",
-    color: "#daf2fd",
-  },
-  {
-    tag: "Stories",
-    title: "Look at the trees",
-    excerpt: "We always take the scenic route. Because I've got nothing but time, Dad says.",
-    date: "2026-05-04",
-    readTime: 1,
-    emoji: "🌳",
-    color: "#e2f0e4",
-  },
-  {
-    tag: "Make",
-    title: "You can just do things",
-    excerpt: "YCJDT.",
-    date: "2026-04-26",
-    readTime: 4,
-    emoji: "🛠️",
-    color: "#f1e6fb",
-  },
-  {
-    tag: "Creating",
-    title: "Cheerleader or critic",
-    excerpt: "Build up or tear down?",
-    date: "2026-04-18",
-    readTime: 2,
-    emoji: "📣",
-    color: "#ffe3e0",
-  },
-  {
-    tag: "AI",
-    title: "Coming 2nd in a Kaggle competition",
-    excerpt: "How my brother and I came second in a health + AI competition.",
-    date: "2026-03-31",
-    readTime: 4,
-    emoji: "🤖",
-    color: "#e5eff5",
-  },
-];
+const posts = [];
 
 const feed = document.getElementById("post-feed");
 const noResults = document.getElementById("no-results");
 
 const dateFormatter = new Intl.DateTimeFormat("en-GB", { day: "2-digit", month: "short", year: "numeric" });
 
-// Escape text before inserting into HTML (safe if posts ever come from user input)
+// Escape text before inserting into HTML
 function escapeHtml(str) {
   return String(str).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 }
@@ -103,6 +36,8 @@ function renderPosts(list) {
     })
     .join("");
 
+  // Empty-state message: "no posts yet" vs "no search matches"
+  noResults.textContent = posts.length === 0 ? "No posts yet. Check back soon." : "No posts match your search.";
   noResults.hidden = list.length !== 0;
 }
 
@@ -137,4 +72,3 @@ burger.addEventListener("click", () => {
 
 // ---------- Footer year ----------
 document.getElementById("year").textContent = new Date().getFullYear();
-
