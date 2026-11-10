@@ -1,7 +1,3 @@
-Here's the current `styles.css`. Copy only the lines inside the code block. The first line should be `/* Colours and spacing…` and the last should be `}`.
-
-```css
-/* Colours and spacing modelled on Ghost's Casper theme */
 :root {
   --color-darkgrey: #15171a;
   --color-midgrey: #738a94;
@@ -483,6 +479,3 @@ html {
     transition: none !important;
   }
 }
-```
-
-Save it as `styles.css` in the same folder as `index.html`. Do you want `script.js` printed the same way?
