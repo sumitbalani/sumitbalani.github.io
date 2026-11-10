@@ -1,3 +1,56 @@
+.site-location {
+  margin: 0.8rem 0 0;
+  font-size: 1.6rem;
+  opacity: 0.6;
+}
+
+/* ---------- Section headings ---------- */
+.section-title {
+  margin: 0 0 3.2rem;
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---------- Work summary ---------- */
+.work {
+  max-width: 860px;
+  margin: 0 auto 8vmin;
+  padding-bottom: 6vmin;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.work-list {
+  margin: 0;
+  padding-left: 2rem;
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+.work-list li + li {
+  margin-top: 1.6rem;
+}
+
+.work-dates {
+  color: var(--color-secondary-text);
+  font-weight: 500;
+}
+
+.work-education {
+  margin: 2.4rem 0 0;
+  font-size: 1.6rem;
+  color: var(--color-secondary-text);
+}
+
+/* ---------- Search ---------- */
+.search-bar {
+  margin: 0 0 4rem;
+}
+
 /* Colours and spacing modelled on Ghost's Casper theme */
 :root {
   --color-darkgrey: #15171a;
