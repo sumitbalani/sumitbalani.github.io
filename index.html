@@ -1,0 +1,104 @@
+Here's the current file, from `/home/sbalani/.workspace/basic-website/index.html`. It needs `styles.css` and `script.js` in the same folder.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sumit Balani – Software Engineering Manager at Amazon Search." />
+  <title>Sumit Balani</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#site-main">Skip to content</a>
+
+  <!-- Dark hero band: header + site title -->
+  <div class="site-top">
+    <header class="gh-head">
+      <div class="gh-head-inner">
+        <div class="gh-head-brand">
+          <a class="gh-head-logo" href="#">Sumit Balani</a>
+          <button class="gh-burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+            <span></span><span></span>
+          </button>
+        </div>
+
+        <nav class="gh-head-menu" id="main-nav" aria-label="Main">
+          <ul class="nav">
+            <li><a href="#work">Work</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#">Health</a></li>
+            <li><a href="#">Family</a></li>
+          </ul>
+        </nav>
+
+        <div class="gh-head-actions">
+          <button class="gh-icon-btn" id="search-toggle" type="button" aria-label="Search posts" aria-expanded="false" aria-controls="search-bar">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="site-header-content">
+      <h1 class="site-title">Sumit Balani</h1>
+      <p class="site-description">Software Engineering Manager at Amazon Search &middot; previously AWS</p>
+      <p class="site-location">San Francisco Bay Area</p>
+    </div>
+  </div>
+
+  <main id="site-main" class="site-main">
+    <!-- Work summary -->
+    <section id="work" class="work" aria-labelledby="work-heading">
+      <h2 id="work-heading" class="section-title">Work</h2>
+      <ul class="work-list">
+        <li>
+          <strong>Software Development Manager, Amazon Search</strong> <span class="work-dates">(4 years, 2022 – Present)</span>:
+          Leading teams in Core Search Infrastructure, including the Search Query Gateway, that own the large-scale
+          distributed systems behind Amazon Search, which index billions of products and serve billions of requests
+          with latencies in the tens of milliseconds.
+        </li>
+        <li>
+          <strong>Software Development Engineer, A9 Search &amp; AWS</strong> <span class="work-dates">(2016 – 2021)</span>:
+          Designed and built scalable, low-latency backend services across Search Indexing, Platform, Query and
+          Ranking, after starting on the AWS Kinesis team.
+        </li>
+        <li>
+          <strong>Angel Investor &amp; Advisor, LyveCom</strong> <span class="work-dates">(2022 – 2025, acquired)</span>:
+          Advised the engineering team on growth and globalization for a live-video eCommerce startup.
+        </li>
+      </ul>
+      <p class="work-education">University of Waterloo</p>
+    </section>
+
+    <!-- Search bar (toggled by the search icon) -->
+    <div class="search-bar" id="search-bar" hidden>
+      <label for="post-search" class="visually-hidden">Search posts</label>
+      <input id="post-search" type="search" placeholder="Search posts by title, tag or excerpt..." autocomplete="off" />
+    </div>
+
+    <section id="blog" aria-labelledby="blog-heading">
+      <h2 id="blog-heading" class="section-title">Blog</h2>
+      <!-- Cards are rendered by script.js from the `posts` array -->
+      <div class="post-feed" id="post-feed"></div>
+      <p class="no-results" id="no-results" hidden>No posts match your search.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <section class="copyright"><a href="#">Sumit Balani</a> &copy; <span id="year"></span></section>
+      <nav class="site-footer-nav" aria-label="Social">
+        <a href="https://www.linkedin.com/in/sumitbalani" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </nav>
+      <div class="powered-by">Built with HTML, CSS &amp; JS</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+```
